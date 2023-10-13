@@ -1,12 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
+#define ll long long 
+istream& operator>>(istream &is, vector<ll> &a){
+    for(auto& it : a){
+        is >> it;
+    }
+    return is;
+}
+//
+ostream& operator<<(ostream &os, vector<ll> &a){
+    for (auto& it : a){
+        os << it << ' ';
+    }
+    return os;
+}
 void solve(){
     ll n; cin >> n;
     vector<ll> a(n);
-    for (auto& it : a) cin >> it;
-    sort(a.begin(), a.end());
-    for (auto& it : a) cout << it << ' ';
+    cin >> a;
+    sort(a.rbegin(), a.rend());
+    cout << a;
 }
 signed main(){
     ios::sync_with_stdio(false);
